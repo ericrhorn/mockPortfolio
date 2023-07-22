@@ -199,15 +199,21 @@ const ContactMeSection = () => {
        <Box p={6} rounded="md" w="100%"> 
          <form onSubmit={formik.handleSubmit}> 
            <VStack spacing={4}> 
+
              <FormControl isInvalid={!!formik.errors.firstName && formik.touched.firstName}> 
                <FormLabel htmlFor="firstName">Name</FormLabel> 
+               
                <Input 
                  id="firstName" 
                  name="firstName" 
                  {...formik.getFieldProps("firstName")} 
                /> 
+
                <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage> 
+
              </FormControl> 
+
+
              <FormControl isInvalid={!!formik.errors.email && formik.touched.email}> 
                <FormLabel htmlFor="email">Email Address</FormLabel> 
                <Input 
